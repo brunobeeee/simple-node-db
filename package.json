@@ -1,0 +1,36 @@
+{
+    "name": "simple-node-db",
+    "version": "1.0.0",
+    "source": "src/index.html",
+    "scripts": {
+        "dev": "parcel"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brunobeeee/simple-node-db.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/brunobeeee/simple-node-db/issues"
+    },
+    "homepage": "https://github.com/brunobeeee/simple-node-db#README.md",
+    "devDependencies": {
+        "buffer": "^6.0.3",
+        "crypto-browserify": "^3.12.0",
+        "events": "^3.3.0",
+        "os-browserify": "^0.3.0",
+        "parcel": "^2.9.3",
+        "path-browserify": "^1.0.1",
+        "process": "^0.11.10",
+        "stream-browserify": "^3.0.0",
+        "timers-browserify": "^2.0.12",
+        "url": "^0.11.1",
+        "util": "^0.12.5"
+    },
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "mysql.js": "^1.0.2"
+    }
+}

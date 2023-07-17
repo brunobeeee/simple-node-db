@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    platform: linux/arm64
+    build:
+      context: .
+      target: runner
+    entrypoint:
+      - sleep
+      - infinity

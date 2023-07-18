@@ -1,7 +1,4 @@
 .DS_Store
 .parcel-cache
 /node_modules/
-/dist/
-auth
-.env
-favicons
+database.db

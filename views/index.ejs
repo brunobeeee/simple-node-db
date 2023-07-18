@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
 <head>
   <title>SQLite Database</title>
   <script src="https://kit.fontawesome.com/d5d2ab0e69.js" crossorigin="anonymous"></script>
   <link href="/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body">
-  <div class="container">
+<body>
+  <div class="container mw-md mt-5">
     <h1 class="mt-5">SQLite Database</h1>
 
     <table class="table mt-4">
       <thead>
         <tr>
           <th>
-            <a class="text-primary" href="/?sortby=id">ID</a>
+            <a class="h5 text-primary text-decoration-none" href="/?sortby=id">ID</a>
           </th>
           <th>
-            <a class="text-primary" href="/?sortby=name">Name</a>
+            <a class="h5 text-primary text-decoration-none" href="/?sortby=name">Name</a>
           </th>
-          <th class="col-actions">Actions</th>
+          <th class="col-actions"></th>
         </tr>
       </thead>
       <tbody>
@@ -28,9 +28,9 @@
             <td><%= row.id %></td>
             <td class="col-content"><%= row.name %></td>
             <td class="col-actions">
-              <a href="/data/<%= row.id %>/edit" class="btn btn-primary btn-sm me-2"><i class="fa-solid fa-pen-to-square"></i></a>
+              <a href="/data/<%= row.id %>/edit" class="btn text-primary btn-sm p-0 me-2"><i class="fa-solid fa-pen-to-square"></i></a>
               <form method="POST" action="/data/<%= row.id %>?_method=DELETE" style="display: inline;">
-                <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+                <button type="submit" class="btn text-danger btn-sm p-0"><i class="fa-solid fa-trash"></i></button>
               </form>
             </td>
           </tr>
@@ -42,14 +42,14 @@
         <% } %>
       </tbody>
     </table>
-
-    <form method="POST" action="/data" enctype="application/x-www-form-urlencoded" class="mt-4">
-      <div class="input-group">
-        <input type="text" name="name" class="form-control" placeholder="Add entry">
-        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i></button>
-      </div>
-    </form>
   </div>
+
+  <form method="POST" action="/data" enctype="application/x-www-form-urlencoded" class="w-100 mw-md mx-auto" style="position: fixed; bottom: 15px; left: 50%; transform: translate(-50%, -10px); box-shadow: 0px -5px 40px 20px #000000!important;">
+    <div class="input-group">
+      <input type="text" name="name" class="form-control" placeholder="Add entry">
+      <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i></button>
+    </div>
+  </form>
 
 
 </body>

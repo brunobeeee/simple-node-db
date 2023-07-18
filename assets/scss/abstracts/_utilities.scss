@@ -1,0 +1,31 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/utilities";
+
+// Add a max-width option that uses Breakpoints
+$mw-add: (
+  xs: map-get($grid-breakpoints, "xs"),
+  sm: map-get($grid-breakpoints, "sm"),
+  md: map-get($grid-breakpoints, "md"),
+  lg: map-get($grid-breakpoints, "lg"),
+  xl: map-get($grid-breakpoints, "xl"),
+  xxl: map-get($grid-breakpoints, "xxl"),
+  xxxl: 1800px
+  );
+
+$utilities: map-merge(
+    $utilities,
+    (
+      "max-width": map-merge(
+        map-get($utilities, "max-width"),
+        (
+          values: map-merge(
+            map-get(map-get($utilities, "max-width"), "values"),
+            $mw-add,
+          ),
+        ),
+      ),
+    )
+);

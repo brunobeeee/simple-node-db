@@ -2,7 +2,6 @@
 .parcel-cache
 /node_modules/
 /dist/
-/public/css/*
 auth
 .env
 favicons

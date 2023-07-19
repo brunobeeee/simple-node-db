@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    platform: linux/arm64
+    build:
+      context: .
+      target: runner
+    ports:
+      - 1234:1234
+    volumes:
+      - app:/com.docker.devenvironments.code
+volumes:
+  app:

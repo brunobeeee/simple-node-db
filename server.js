@@ -17,6 +17,13 @@ app.use(methodOverride('_method'));
 // Expose static files
 app.use(express.static(__dirname + '/public'));
 
+// Create database if not exists
+db.serialize(() => {
+  db.run('CREATE TABLE IF NOT EXISTS tablename (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)');
+});
+
+
+
 // Route for rendering the homepage
 app.get('/', (req, res) => {
   // When clicking on the column title and the column is the same the sort order is switched ASC <> Desc
